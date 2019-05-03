@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
   password : '123456',
   database : 'chatlog',
 }); 
-// connection.connect(); 
+connection.connect(); 
 
 router.get('/login', function(req, res, next) { 
   connection.query('SELECT id, name, username, headImageUrl FROM user where username = "' + 
