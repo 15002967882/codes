@@ -29,9 +29,30 @@
 		<button onclick="jump()">确认</button>
 	</div>
 	<script type="text/javascript">
-		var headArray = ['/images/imageswechat/head1.png','/images/imageswechat/head2.png','/images/imageswechat/head3.png','/images/imageswechat/head4.png']
+		var headArray = [
+			'/images/imageswechat/head1.png',
+			'/images/imageswechat/head2.png',
+			'/images/imageswechat/head3.png',
+			'/images/imageswechat/head4.png',
+			'/images/imageswechat/head5.png',
+			'/images/imageswechat/head6.png',
+			'/images/imageswechat/head7.png',
+			'/images/imageswechat/head8.png',
+			'/images/imageswechat/head9.png',
+			'/images/imageswechat/head10.png',
+			'/images/imageswechat/head11.png',
+			'/images/imageswechat/head12.png',
+			'/images/imageswechat/head13.png',
+			'/images/imageswechat/head14.png',
+			'/images/imageswechat/head15.png',
+			'/images/imageswechat/head16.png',
+			'/images/imageswechat/head17.png',
+			'/images/imageswechat/head18.png',
+			'/images/imageswechat/head19.png',
+			'/images/imageswechat/head20.png'
+		]
 		function register() {
-			var num = Math.floor(Math.random()*3);
+			var num = Math.floor(Math.random()*10000)%20;
 			headImageUrl = headArray[num];
 			var name = document.querySelector("input[name=name]");
 			var username = document.querySelector("input[name=username]");
