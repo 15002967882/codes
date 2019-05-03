@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>焦彦军</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<style type="text/css">
+		html, body{height: 100%;}
+		body {margin: 0;}
+		.chat{min-height: 100%;box-sizing: border-box; padding: 8px;padding-bottom: 60px; background-color: #E7E7E7;}
+		.chat div{
+			font-size: 12px;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		img{
+			width: 36px;
+			height: 36px;
+			display: inline-block;
+			border-radius: 5px;
+		}
+		.jyf,.jyj>div,img{vertical-align:top; }
+		.jyf{margin-top: 12px;text-align: left;}
+		.jyj{margin-top: 12px;text-align: right;}
+		.jyf div{margin-left: 5px; background-color: #ffffff;word-wrap:break-word;word-break:break-all;display: inline-block;max-width: 60%;text-align: left;}
+		.jyj div{margin-right: 5px;background-color: #95ec69;word-wrap:break-word;word-break:break-all;display: inline-block;max-width: 60%;text-align: left;}
+		.send{padding: 8px;padding-left: 10px; background-color: #f7f7f7; width: 100%;position: fixed;bottom: 0;}
+		.send>button{width: 15%;height: 30px;padding: 5px;background-color: #07c160; display: inline-block;overflow: auto;
+			border:none;border-radius: 6px;color: #ffffff;}
+		.send>input{margin-right: 2%; width: 78%;height: 30px;padding: 1px;border-radius: 6px;border:none; display: inline-block;overflow: auto;}
+
+		.login{width: 100%;height: 100%;margin:0;position: fixed;background-color: white;border-radius: 15px;padding-top: 5%;}
+		.login input{width: 63%;padding: 5px;margin-top: 5%;border-radius: 5px;border: 1px solid #ededed;}
+		.login button{width: 80%;height: 40px; margin:5% auto auto 10%;background-color: #129611;color: white;border-radius: 5px;border: none;}
+		.login label{margin-left: 10%;font-size: 14px;}
+		.login a{font-size: 13px; margin-top: 40%;color: #3665cb;text-decoration: none;margin: 200px auto auto 40%;display: block;}
+		.main{display: none;margin-top: 5%;}
+		.blank{height: 30px;}
+	</style>
+</head>
+<body>
+	<div class="login" id="login">
+		<label>用户名 </label><input type="text" name="username" style="margin-top: 10%!important"></br>
+		<label>密&nbsp&nbsp码 </label><input type="password" name="password"></br>
+		<div class="blank"></div>
+		<button onclick="login()">登录</button></br>
+		<button onclick="register()">注册</button></br>
+		<a href="" onclick="alert('没问题，滚去学习')">遇到问题？</a>
+	</div>
+	<div id="send" class="main">
+		<div class="chat" id="chat">
+		</div>
+		<div class="send">
+			<input type="text" name="q"/>
+			<button onclick="myfunction()">发送</button>
+		</div>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		let socket = io();
+		socket.on('news',(data)=>{
+			console.log(data)
+			mkreceive(data.message, data.headImageUrl);
+		});
+	</script>
+	<script type="text/javascript">
+		function register(){
+			window.open('/register.html', '_self');
+		}
+		var username = null;
+		var head = '';
+		function login(){
+			var input = document.querySelector("input[name=username]");
+			var inputpw = document.querySelector("input[name=password]");
+			var node = document.getElementById("login");
+			if (input.value !== '' && inputpw.value !== '') {
+				username = input.value;
+				var password = inputpw.value;
+				request("GET", "/login?username=" + username + "&password=" + password, function(news){
+					var message = JSON.parse(news);
+					if(message.username !== username) {
+						alert(message.username);
+					} else {
+						head = message.headImageUrl;
+						node.style.display = "none";
+						var send = document.getElementById("send");
+						send.style.display = "block";
+						document.title = message.name;
+						mkchatLog();
+					}
+				});
+			}
+		}
+		function mkchatLog(){
+			request("GET", "/chatLog", function(news){
+				// console.log(news);
+				// var obj = news.split('\n');
+				var obj = JSON.parse(news);
+				for(var i = 0;i < obj.length; i++) {
+					if(obj[i].name === username) mksend(obj[i].message, obj[i].headImageUrl);
+					else mkreceive(obj[i].message, obj[i].headImageUrl);
+				}
+			});	
+		}
+		function myfunction() {
+			var input = document.querySelector("input[name=q]");
+			if(input.value!==""){
+				mksend(input.value, head);
+				socket.emit('message', {name: username, message: input.value, headImageUrl:head});
+				// request("GET", "/message?name=" + username + "&message=" + input.value, function(news){
+				// 	// mkreceive(news);
+				// });
+			}
+			input.value = '';
+		}	
+		function mkreceive(value,headImageUrl){
+			var chat = document.getElementById('chat');
+			var node=document.createElement("div");
+			node.className = "jyf";
+			node.innerHTML ='<img src="' + headImageUrl + '"><div>' + value + '</div>';
+			chat.appendChild(node);
+			window.scrollTo(0,document.body.scrollHeight);
+		}	
+		function mksend(value,headImageUrl){
+			var chat = document.getElementById('chat');
+			var node=document.createElement("div");
+			node.className = "jyj";
+			node.innerHTML = '<div>'+ value +'</div><img src="' + headImageUrl + '">';
+			chat.appendChild(node);	
+			window.scrollTo(0,document.body.scrollHeight);
+		}
+		//AJAX
+		function request(method, url, cb){
+			var xhr = new XMLHttpRequest();
+			xhr.open(method, url, true);
+			xhr.send();
+			xhr.onreadystatechange=function() {
+			  if (xhr.readyState==4 && xhr.status==200) {
+			     var news = xhr.responseText;
+			     cb(news);
+			  }
+			}
+		}
+	</script>
+
+</body>
+</html>
