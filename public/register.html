@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 	<style type="text/css">
 		html,body{height: 100%;}
-		.alert{display: none; position: absolute;top: 35%;right: 35%;background-color: white;border-radius: 8px;padding: 20px;}
-		.alert button{margin: 8% 0 5% 70%;border-radius: 5px;}
+		.alert{display:none ;background-color: white;border-radius: 8px;padding: 20px;width: 70%;text-align: center;border: 1px solid #ededed;position: absolute;top: 100px;left: 30px;}
+		.alert button{border-radius: 5px;background-color:#129611;border: none;margin:20px auto auto 50%; }
 		.register{width: 100%;height: 100%; margin: 0;padding-top: 5%;}
 		.register p{widows: 60%; margin-left: 10%;margin-top: 10%; font-weight: bolder;}
 		.register label{width: 10%; margin-left: 10%;font-size: 15px;justify-content: space-between;text-align: right;}
@@ -25,7 +25,7 @@
 		<button onclick="register()">提交</button>
 	</div>
 	<div class="alert" id="alert">
-		<p>您已注册成功，点击“确认”按钮返回登录界面</p>
+		<div>您已注册成功，点击“确认”按钮返回登录界面</div>
 		<button onclick="jump()">确认</button>
 	</div>
 	<script type="text/javascript">

@@ -4,33 +4,63 @@
   "name": "阳光照在床上",
   "style": "家装",
   "price": "24万元",
-  "area": "120平方"
+  "area": "120平方",
+  "huxing": "三居室",
+  "details": [{"pic": "/images/zhuangxiu/ex11.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"}]
 }, {
   "id": 2,
   "poster": "/images/zhuangxiu/ex12.jpg",
   "name": "阳光照在床上",
   "style": "家装",
-  "price": "24万元",
-  "area": "120平方"
+  "price": "25万元",
+  "area": "120平方",
+  "huxing": "三居室",
+  "details": [{"pic": "/images/zhuangxiu/ex12.jpg"},
+             {"pic": "/images/zhuangxiu/ex12.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"}]
 }, {
   "id": 3,
   "poster": "/images/zhuangxiu/ex13.jpg",
   "name": "阳光照在床上",
   "style": "家装",
-  "price": "24万元",
-  "area": "120平方"
+  "price": "26万元",
+  "area": "120平方",
+  "huxing": "三居室",
+  "details": [{"pic": "/images/zhuangxiu/ex13.jpg"},
+             {"pic": "/images/zhuangxiu/ex13.jpg"},
+             {"pic": "/images/zhuangxiu/ex13.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"}]
 }, {
   "id": 4,
   "poster": "/images/zhuangxiu/ex14.jpg",
   "name": "阳光照在床上",
   "style": "家装",
-  "price": "24万元",
-  "area": "120平方"
+  "price": "27万元",
+  "area": "120平方",
+  "huxing": "三居室",
+  "details": [{"pic": "/images/zhuangxiu/ex14.jpg"},
+             {"pic": "/images/zhuangxiu/ex14.jpg"},
+             {"pic": "/images/zhuangxiu/ex14.jpg"},
+             {"pic": "/images/zhuangxiu/ex14.jpg"},
+             {"pic": "/images/zhuangxiu/ex11.jpg"}]
 }, {
   "id": 5,
   "poster": "/images/zhuangxiu/ex15.jpg",
   "name": "阳光照在床上",
   "style": "家装",
-  "price": "24万元",
-  "area": "120平方"
+  "price": "28万元",
+  "area": "120平方",
+  "huxing": "三居室",
+  "details": [{"pic": "/images/zhuangxiu/ex15.jpg"},
+             {"pic": "/images/zhuangxiu/ex15.jpg"},
+             {"pic": "/images/zhuangxiu/ex15.jpg"},
+             {"pic": "/images/zhuangxiu/ex15.jpg"},
+             {"pic": "/images/zhuangxiu/ex15.jpg"}]
 }]

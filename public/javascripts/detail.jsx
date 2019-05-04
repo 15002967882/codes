@@ -1,4 +1,3 @@
-//AJAX
 function request(method, url, cb){
   var xhr = new XMLHttpRequest();
   xhr.open(method, url, true);
@@ -12,13 +11,13 @@ function request(method, url, cb){
   }
 }
 
-class Example extends React.PureComponent {
+class Desc extends React.PureComponent {
   state = {
     list: [],
   }
   componentDidMount() {
     request("GET", "/jsons/ex.json", (result) => {
-      this.setState({ list: result })
+      this.setState({ list: result.details })
     });
   }
   render() {
