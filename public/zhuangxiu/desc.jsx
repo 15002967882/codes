@@ -46,7 +46,7 @@ class Description extends React.PureComponent {
   render() {
     console.log(this.state.list);
     return (
-      <div>
+      <div className="headContainer">
         <div class="head">
           <div><span>风格：</span>{this.state.style}</div>
           <div><span>面积：</span>{this.state.area}</div>
