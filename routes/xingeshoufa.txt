@@ -1,0 +1,72 @@
+[
+{
+	"picture":"/images/qianQianMusic/xg1.png",
+	"text1":"新歌抢先听",
+	"text2":"千千音乐速递"
+},
+{
+	"picture":"/images/qianQianMusic/xg2.png",
+	"text1":"永子赋",
+	"text2":"段林希"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg3.png",
+	"text1":"漂流瓶",
+	"text2":"黄英"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg4.png",
+	"text1":"Evening Sitdown Vision",
+	"text2":"RUBUR"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg5.png",
+	"text1":"FALLEN",
+	"text2":"花たん"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg6.png",
+	"text1":"ゴールデンアフタースクール",
+	"text2":"OxT"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg7.png",
+	"text1":"翻了",
+	"text2":"汪晨蕊"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg8.png",
+	"text1":"友情岁月(兄弟版)",
+	"text2":"吴镇宇/摩登兄弟刘宇宁"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg9.png",
+	"text1":"每当我想起你",
+	"text2":"朱孝天"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg10.png",
+	"text1":"Girl, let me love you",
+	"text2":"李让同学"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg11.png",
+	"text1":"一万瓶啤酒",
+	"text2":"Sucker"
+}
+,
+{
+	"picture":"/images/qianQianMusic/xg12.png",
+	"text1":"你就让自己漂浮在陌生的城市里/星期六的节奏",
+	"text2":"P.K.14"
+}
+]

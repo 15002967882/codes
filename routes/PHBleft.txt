@@ -1,0 +1,56 @@
+[
+{
+	"num":"01",
+	"pic":"/images/qianQianMusic/head11.png",
+	"text1":"为悦己者容",
+	"text2":"崔子格",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"02",
+	"pic":"/images/hqianQianMusic/ead12.png",
+	"text1":"Oxygen",
+	"text2":"王嘉尔",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"03",
+	"pic":"/images/qianQianMusic/head13.png",
+	"text1":"落霜",
+	"text2":"花粥",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"04",
+	"pic":"/images/qianQianMusic/head14.png",
+	"text1":"为悦己者容",
+	"text2":"崔子格",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"05",
+	"pic":"/images/qianQianMusic/head15.png",
+	"text1":"少女年华",
+	"text2":"刘惜君",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"06",
+	"pic":"/images/qianQianMusic/head16.png",
+	"text1":"蝶恋花.愿为花更美",
+	"text2":"龙梅子",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+}
+]

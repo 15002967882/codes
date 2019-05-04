@@ -1,0 +1,26 @@
+[
+{
+	"pic":"/images/qianQianMusic/xuezhiqian.png",
+	"name":"薛之谦"
+},
+{
+	"pic":"/images/qianQianMusic/zhouhuajian.png",
+	"name":"周华健"
+},
+{
+	"pic":"/images/qianQianMusic/longmeizi.png",
+	"name":"龙梅子"
+},
+{
+	"pic":"/images/qianQianMusic/linjunjie.png",
+	"name":"林俊杰"
+},
+{
+	"pic":"/images/qianQianMusic/renxianqi.png",
+	"name":"任贤齐"
+},
+{
+	"pic":"/images/qianQianMusic/liuruoying.png",
+	"name":"刘若英"
+}
+]

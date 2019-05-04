@@ -1,0 +1,44 @@
+[
+{
+	"pic":"/images/qianQianMusic/mv1.png",
+	"name1":"豆你玩",
+	"name2":"李子璇"
+},
+{
+	"pic":"/images/qianQianMusic/mv2.png",
+	"name1":"女王 Drama Queen",
+	"name2":"MiniG迷你机"
+},
+{
+	"pic":"/images/qianQianMusic/mv3.png",
+	"name1":"关于现实的母女对话",
+	"name2":"黄小琥"
+},
+{
+	"pic":"/images/qianQianMusic/mv4.png",
+	"name1":"青城山下白素贞",
+	"name2":"鞠婧祎"
+},
+{
+	"pic":"/images/qianQianMusic/mv5.png",
+	"name1":"看到风",
+	"name2":"冯提莫"
+},
+{
+	"pic":"/images/qianQianMusic/mv6.png",
+	"name1":"Oxygen",
+	"name2":"王嘉尔"
+}
+,
+{
+	"pic":"/images/qianQianMusic/mv7.png",
+	"name1":"模样",
+	"name2":"黄渤"
+}
+,
+{
+	"pic":"/images/qianQianMusic/mv8.png",
+	"name1":"一场游戏一场梦",
+	"name2":"井柏然/宋佳/马思纯/秦昊/陈妍希"
+}
+]

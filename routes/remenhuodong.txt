@@ -1,0 +1,14 @@
+[
+{
+	"pic":"/images/qianQianMusic/rmhd1.png",
+	"name":"少年红星音乐计划"
+},
+{
+	"pic":"/images/qianQianMusic/rmhd2.png",
+	"name":"千千Nu创音乐榜"
+},
+{
+	"pic":"/images/qianQianMusic/rmhd3.png",
+	"name":"电影《夏目友人帐》赠票活动"
+}
+]

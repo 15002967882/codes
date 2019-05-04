@@ -1,0 +1,56 @@
+[
+{
+	"num":"01",
+	"pic":"/images/qianQianMusic/head31.png",
+	"text1":"为悦己者容",
+	"text2":"崔子格",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"02",
+	"pic":"/images/qianQianMusic/head32.png",
+	"text1":"至少还有你爱我",
+	"text2":"龙梅子/王娜",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"03",
+	"pic":"/images/qianQianMusic/head33.png",
+	"text1":"都说",
+	"text2":"龙梅子/老猫",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"04",
+	"pic":"/images/qianQianMusic/head34.png",
+	"text1":"蝶恋花.愿为花更美",
+	"text2":"龙梅子",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"05",
+	"pic":"/images/qianQianMusic/head35.png",
+	"text1":"唱一首情歌",
+	"text2":"龙梅子/冷漠",
+	"pic1":"/imagesqianQianMusic/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"06",
+	"pic":"/images/qianQianMusic/head36.png",
+	"text1":"瓜很甜",
+	"text2":"后弦",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+}
+]

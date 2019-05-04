@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>千千音乐</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{padding: 0;margin:0;box-sizing: border-box;}
+		a{text-decoration: none;color: #e4e4e4;}
+		a:link {color:#e4e4e4;}    
+		a:visited {color:black;font-weight: bold;} 
+		a:hover {color:red;font-weight: bold;} 
+		a:active {color:#0000FF;} 
+		button:hover{color: red}
+		.img:hover{transform: scale(1.08,1.08);cursor: pointer;transition: all 0.8s;}
+		.wenzi{margin:30px 0 30px 0;}
+		.title{font-size: 24px;display: inline-block;}
+		.stitle{font-size: 13px;margin-left: 20px;display: inline-block;color: #e4e4e4;}
+		.name{color: #9fa19f!important;font-size: 12px;}
+
+		.headLine{width: 95%; margin-left: 5%;box-sizing: border-box;margin-top: 3%;}
+		.headLine a{display: inline-block;vertical-align: middle;margin-left: 3%;text-decoration: none;}
+		.headLine input{width: 18%; height: 20px;vertical-align: middle;margin: 0 -5px 0 50px;border-radius: 8px 0 0 8px;padding: 5px;border:solid 1px #e4e4e4;border-right: none!important;}
+		.headLine button{height: 32px;vertical-align: middle;border-radius: 0 8px 8px 0;background-color: #ffffff;padding: 5px;border:solid 1px #e4e4e4;border-left: none!important;}
+		.line2 p{display: inline-block;margin:0.8% 3% 1.2% 3%;font-size: 15px;}
+		.line2{width: 100%;height: 40px;background-color: #e8ffff;box-sizing: border-box;margin:2% 0 2% 0;}
+
+		.block3{width: 94%; margin-top: 0;margin-left: 6%;box-sizing: border-box;}
+		.block img{width: 100%;height: 100%;}
+		.block p{width: 100%;margin-top: 3px;font-size: 14px;color: #858585;}
+		.block{width: 20%;margin:0 3% 5% 0;display: inline-block;vertical-align: top;}
+		.left{width: 60%;}
+
+		.left{width: 68%;height: 60%;box-sizing: border-box;display: inline-block;vertical-align: top;}
+		.right{width: 30%;height: 60%;box-sizing: border-box;display: inline-block;vertical-align: top;}
+		.FLTGButton{width: 25%;height: 40px;margin:0 3% 3% 0;border:solid 1px #e4e4e4;border-radius: 20px;background-color: #ffffff;}
+		.tjdta{display: inline-block;width: 20%;margin:0 3% 3% 0;}
+		.block33{width: 100%;}
+		.block4b img{width: 100%;height: 100%;}
+		.block4b p{width: 100%;margin: 0;font-size: 15px;color: black;text-align: center;}
+		.block4b{width: 12%;margin:0 4% 3% 0;display: inline-block;vertical-align: top;}
+
+		.block4{width: 94%; margin-left: 6%;box-sizing: border-box;}
+		.block41{width: 26%;height: 75%; border:solid 1px #cddfb2;display: inline-block;vertical-align: top;margin-right: 7.5%;}
+		.block41>a>div{margin: 3% 0 5% 70%;font-size: 15px;}
+		.b41Div1{width: 100%;height: 15%;background-color: #eef4e5;margin:0;}
+		.b41Div1 p{display: inline-block;vertical-align: middle;margin:7% 10% 7% 5%;font-size: 20px;}
+		.b41Div1 img{display: inline-block;vertical-align: middle;margin:7% 0 7% 50%;}
+		.b41Div2>div>p{width: 5%;display: inline-block;vertical-align: middle;margin:0 2% 0 5%;font-size: 20px;color: #5b9400;}
+		.b41Div2 img{display: inline-block;vertical-align: middle;}
+		.b41Div2>div>div{width: 33%;display: inline-block;vertical-align: middle;}
+		.b41Div2>div>div>a>p{margin: 0;font-size: 14px;color: black;}
+		.b41Div2>div>div>a>img{width: 20px;height: 20px;display: inline-block;vertical-align: middle;}
+		.b41Div2{margin-top: 5%;}
+
+		.block42{width: 26%;height: 75%;border:solid 1px #f4cdb2;display: inline-block;vertical-align: top;margin-right: 7.5%;}
+		.block42>a>div{margin: 3% 0 5% 70%;font-size: 15px;}
+		.b42Div1{width: 100%;height: 15%;background-color: #fbeee5;margin:0;}
+		.b42Div1 p{display: inline-block;vertical-align: middle;margin:7% 10% 7% 5%;font-size: 20px;}
+		.b42Div1 img{display: inline-block;vertical-align: middle;margin:7% 0 7% 50%;}
+		.b42Div2>div>p{width: 5%;display: inline-block;vertical-align: middle;margin:0 2% 0 5%;font-size: 20px;color: #db5800;}
+		.b42Div2 img{display: inline-block;vertical-align: middle;}
+		.b42Div2>div>div{width: 33%;display: inline-block;vertical-align: middle;}
+		.b42Div2>div>div>a>p{margin: 0;font-size: 14px;color: black;}
+		.b42Div2>div>div>a>img{width: 20px;height: 20px;display: inline-block;vertical-align: middle;}
+		.b42Div2{margin-top: 5%;}
+
+		.block43{width: 26%;height: 75%;border:solid 1px #bcece4;display: inline-block;vertical-align: top;margin-right: 4%;}
+		.block43>a>div{margin: 3% 0 5% 70%;font-size: 15px;}
+		.b43Div1{width: 100%;height: 15%;background-color: #e8f8f6;margin:0;}
+		.b43Div1 p{display: inline-block;vertical-align: middle;margin:7% 10% 7% 5%;font-size: 20px;}
+		.b43Div1 img{display: inline-block;vertical-align: middle;margin:7% 0 7% 38%;}
+		.b43Div2>div>p{width: 5%;display: inline-block;vertical-align: middle;margin:0 2% 0 5%;font-size: 20px;color: #21bfa6;}
+		.b43Div2 img{display: inline-block;vertical-align: middle;}
+		.b43Div2>div>div{width: 33%;display: inline-block;vertical-align: middle;}
+		.b43Div2>div>div>a>p{margin: 0;font-size: 14px;color: black;}
+		.b43Div2>div>div>a>img{width: 20px;height: 20px;display: inline-block;vertical-align: middle;}
+		.b43Div2{margin-top: 5%;}
+
+		.block5{width: 94%;margin-left: 6%;margin-top: 5%;box-sizing: border-box;}
+		.geshou{width: 12%;margin:0 3% 1% 1%;display: inline-block;vertical-align: middle;}
+		.geshou img{border-radius: 100%;}
+		.geshou p{margin-left: 20%;font-size: 14px;color: black;}
+
+		.block6{width: 94%;margin-left: 6%;box-sizing: border-box;}
+		.b6mv{width: 20%;margin-right: 4.2%;margin-bottom: 3%;display: inline-block;vertical-align: top;}
+		.b6mv img{width: 100%;height: 100%;}
+		.b6mv p{margin-top: 0.5%;font-size: 13px;color: black;text-align: center;color: black;}
+
+		.block7{width: 94%;margin-left: 6%;box-sizing: border-box;}
+		.b7hd{width: 27.5%;height: 5%;margin-right: 5.3%;margin-bottom: 3%;display: inline-block;vertical-align: top;}
+		.b7hd img{width: 100%;height: 100%;}
+		.b7hd p{margin-top: 2%;font-size: 13px;color: black;text-align: center;}
+
+		.block8{width: 100%;background-color: #333333;}
+		.b8title{font-size: 18px;color: white;padding: 10% 0 10% 0;text-align: left;}
+		.b8left{margin-left: 8%!important;}
+		.b8left,.b8middle,.b8right{width: 28%;margin:0 2% 0 0;display: inline-block;vertical-align: top;text-align: center;}
+		.b8left>div{float:left;margin: 0 10% 10% 0;}
+		.b8left>div>a>p{color: #939393;font-size: 14px;}
+		.b8middle div{width: 30%;text-align: left;color: #939393;font-size: 14px;float: left; margin: 0 2% 10% 0;}
+		.b8right div{float: left;margin:0 3% 0 0;text-align: left;width: 40%;}
+		.b8right>div p{color: #939393;font-size: 14px;text-align: center;vertical-align: middle;}
+		.b8right>div a{display: inline-block;vertical-align: middle;}
+		.last{padding: 20px 0 30px 0;}
+		.last div{text-align: center;color: #939393;font-size: 14px;margin-bottom: 1%;}
+		.last a{color: #939393!important;font-size: 15px;}
+	</style>
+</head>
+<body>
+	<div class="headLine">
+		<a href=""><img src="/images/qianQianMusic/qqyinyue.png"></a>
+		<a href="">发现音乐</a>
+		<a href="">随心听</a>
+		<a href="">客户端</a>
+		<a href="">VIP</a>
+		<a href="">音乐人</a>
+		<a href="">演出</a>
+		<input type="text" placeholder="请输入歌名、歌词、歌手或专辑" name="search">
+		<button><img style="width: 100%;height: 100%;" src="/images/qianQianMusic/1.png"></button>
+		<a href=""><span style="font-size: 14px;">登录</span></a>
+		<a href=""><span style="font-size: 14px;">注册</span></a>
+	</div>
+	<div class="line2">
+		<a href=""><p style="margin-left: 24%;">推荐</p></a>
+		<a href=""><p>歌单</p></a>
+		<a href=""><p>歌手</p></a>
+		<a href=""><p>榜单</p></a>
+		<a href=""><p>分类</p></a>
+		<a href=""><p>MV</p></a>
+		<a href=""><p>U榜</p></a>
+	</div>
+	<div class="block3">
+		<div class="left" id="left">
+			<div class="wenzi">
+				<div class="title">热门歌单</div>
+				<div class="stitle"><a href="">更多</a></div>	
+			</div>
+		</div>
+		<div class="right">
+			<div class="fenLeiTingGe">
+				<div class="wenzi">
+					<div class="title">分类听歌</div>
+					<div class="stitle"><a href="">更多</a></div>	
+				</div>
+				<div>
+					<a href=""><button class="FLTGButton">情歌</button></a>
+					<a href=""><button class="FLTGButton">红歌</button></a>
+					<a href=""><button class="FLTGButton">劲爆</button></a>
+					<a href=""><button class="FLTGButton">天籁</button></a>
+					<a href=""><button class="FLTGButton">经典老歌</button></a>
+					<a href=""><button class="FLTGButton">欧美</button></a>
+					<a href=""><button class="FLTGButton">网络歌曲</button></a>
+					<a href=""><button class="FLTGButton">民谣</button></a>
+					<a href=""><button class="FLTGButton">80后</button></a>
+					<a href=""><button class="FLTGButton">儿歌</button></a>
+					<a href=""><button class="FLTGButton">伤感</button></a>
+					<a href=""><button class="FLTGButton">安静</button></a>
+				</div>
+			</div>
+			<div class="tuiJianDianTai">
+				<div class="wenzi">
+					<div class="title">推荐电台</div>
+					<div class="stitle"><a href="">更多</a></div>	
+				</div>
+				<div>
+					<div class="tjdta" style="font-size: 13px;">
+						<a href=""><img class="img" src="/images/qianQianMusic/tjdt1.png"></br></a>随便听听
+					</div>
+					<div class="tjdta" style="font-size: 13px;">
+						<a href=""><img class="img" src="/images/qianQianMusic/tjdt2.png"></br></a>&nbsp;&nbsp;&nbsp;在家
+					</div>
+					<div class="tjdta" style="font-size: 13px;">
+						<a href=""><img class="img" src="/images/qianQianMusic/tjdt3.png"></br></a>&nbsp;&nbsp;&nbsp;工作
+					</div>
+					<div class="tjdta" style="font-size: 13px;">
+						<a href=""><img class="img" src="/images/qianQianMusic/tjdt4.png"></br></a>&nbsp;&nbsp;&nbsp;上网
+					</div>
+					<div class="tjdta" style="font-size: 13px;">
+						<a href=""><img class="img" src="/images/qianQianMusic/tjdt5.png"></br></a>&nbsp;&nbsp;&nbsp;店铺
+					</div>
+					<div class="tjdta" style="font-size: 13px;">
+						<a href=""><img class="img" src="/images/qianQianMusic/tjdt6.png"></br></a>&nbsp;&nbsp;&nbsp;运动
+					</div>
+					<div class="tjdta" style="font-size: 13px;">
+						<a href=""><img class="img" src="/images/qianQianMusic/tjdt7.png"></br></a>&nbsp;&nbsp;&nbsp;轻松
+					</div>
+					<div class="tjdta" style="font-size: 13px;">
+						<a href=""><img class="img" src="/images/qianQianMusic/tjdt8.png"></br></a>&nbsp;&nbsp;&nbsp;甜蜜
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="block33" id="block33">
+			<div class="wenzi">
+				<div class="title">新歌首发</div>
+				<div class="stitle"><a href="">更多</a></div>	
+			</div>
+		</div>
+	</div>
+
+	<div class="block4">
+		<div class="wenzi">
+			<div class="title">排行榜</div>
+			<div class="stitle"><a href="">更多</a></div>	
+		</div>
+		<div class="block41">
+			<div class="b41Div1">
+				<p><a href=""><b style="color: #5b9400;">新歌榜</b></a></p>
+				<a href=""><img src="/images/qianQianMusic/b41.png"></a>
+			</div>
+			<div id="block41"></div>
+			<a href=""><div style="color: #999999;margin-left: 60%;font-size: 13px;">查看完整榜单></div></a>
+		</div>
+		<div class="block42">
+			<div class="b42Div1">
+				<p><a href=""><b style="color: #db5800;">热歌榜</b></a></p>
+				<a href=""><img src="/images/qianQianMusic/b42.png"></a>
+			</div>
+			<div id="block42"></div>
+			<a href=""><div style="color: #999999;margin-left: 60%;font-size: 13px;">查看完整榜单></div></a>
+		</div>
+		<div class="block43">
+			<div class="b43Div1">
+				<p><a href=""><b style="color: #21bfa6;">网络歌曲榜</b></a></p>
+				<a href=""><img src="/images/qianQianMusic/b43.png"></a>
+			</div>
+			<div id="block43"></div>
+			<a href=""><div style="color: #999999;margin-left: 60%;font-size: 13px;">查看完整榜单></div></a>
+		</div>
+	</div>
+	<div class="block5" id="block5">
+		<div class="wenzi">
+			<div class="title">热门歌手</div>
+			<div class="stitle"><a href="">更多</a></div>	
+		</div>
+	</div>
+	<div class="block6" id="block6">
+		<div class="wenzi">
+			<div class="title">精选MV</div>
+			<div class="stitle"><a href="">更多</a></div>	
+		</div>
+	</div>
+	<div class="block7" id="block7">
+		<div class="wenzi">
+			<div class="title">热门活动</div>
+			<div class="stitle"><a href="">更多</a></div>	
+		</div>
+	</div>
+	<div class="block8">
+		<div style="width: 100%;">
+			<div class="b8left">
+				<p class="b8title">下载客户端</p>
+				<div>
+					<a href=""><img src="/images/qianQianMusic/b8l1.png"></a>
+					<a href=""><p>PC版</p></a>
+				</div>
+				<div>
+					<a href=""><img src="/images/qianQianMusic/b8l2.png"></a>
+					<a href=""><p>MAC版</p></a>
+				</div>
+				<div>
+					<a href=""><img id="anzhuo" onmouseover="have('anzhuo')" onmouseout="no('anzhuo')" src="/images/qianQianMusic/b8l3.png"></a>
+					<img id="ewm1" style="display: none;position: absolute;width: 120px;height: 150px;" src="/images/qianQianMusic/ewm1.png">
+					<a href=""><p>安卓版</p></a>
+				</div>
+				<div>
+					<a href=""><img id="iPhone" onmouseover="have('iPhone')" onmouseout="no('iPhone')" src="/images/qianQianMusic/b8l4.png"></a>
+					<img id="ewm2" style="display: none;position: absolute; width: 120px;height: 150px;" src="/images/qianQianMusic/ewm2.png">
+					<a href=""><p>iPhone版</p></a>
+				</div>
+			</div>
+			<div class="b8middle">
+				<p class="b8title">关于千千音乐</p>
+				<a href=""><div>意见反馈</div></a>
+				<a href=""><div>联系我们</div></a>
+				<a href=""><div>帮助中心</div></a>
+				<a href=""><div>资源开放平台</div></a>
+				<a href=""><div>太合音乐人</div></a>
+			</div>
+			<div class="b8right">
+				<p class="b8title">关注千千音乐</p>
+				<div>
+					<a href=""><img id="yinyue" onmouseover="have('yinyue')" onmouseout="no('yinyue')" src="/images/qianQianMusic/b8r1.png"></a>
+					<img id="ewm3" style="display: none;position: absolute;width: 120px;height: 150px;" src="/images/qianQianMusic/ewm3.png">
+					<a href=""><p>音乐随心听</p></a>
+				</div>
+				<div>
+					<a href=""><img src="images/qianQianMusic/b8r2.png"></a>
+					<a href=""><p>关注微博</p></a>
+				</div>
+				<div>
+					<a href=""><img id="weixin" onmouseover="have('weixin')" onmouseout="no('weixin')" src="/images/qianQianMusic/b8r3.png"></a>
+					<img id="ewm4" style="display: none;position: absolute;width: 120px;height: 150px;" src="/images/qianQianMusic/ewm4.png">
+					<a href=""><p>微信公众号</p></a>
+				</div>
+			</div>
+		</div>
+		<div class="last">
+			<div>@2019 Qianqian 粤文网[2018]0902-359号</div>
+			<div>粤公网安备 44030205002309号 增值电信业务经营许可证：粤B2-20180819</div>
+			<div>违法和不良信息举报电话：101-84369708 转8012 &nbsp;&nbsp;&nbsp;<a href="">举报邮箱：jubao@taihe.com</a> &nbsp;&nbsp; <a href="">反馈中心</a></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function have(id){
+			if(id === 'anzhuo'){
+				var node = document.getElementById('ewm1');
+				node.style.display = 'block';
+			}
+			else if(id === 'iPhone'){
+				var node = document.getElementById('ewm2');
+				node.style.display = 'block';
+			}
+			else if(id === 'yinyue'){
+				var node = document.getElementById('ewm3');
+				node.style.display = 'block';
+			}
+			else if(id === 'weixin'){
+				var node = document.getElementById('ewm4');
+				node.style.display = 'block';
+			}
+		}
+		function no(id){
+			if(id === 'anzhuo'){
+				var node = document.getElementById('ewm1');
+				node.style.display = 'none';
+			}
+			else if(id === 'iPhone'){
+				var node = document.getElementById('ewm2');
+				node.style.display = 'none';
+			}
+			else if(id === 'yinyue'){
+				var node = document.getElementById('ewm3');
+				node.style.display = 'none';
+			}
+			else if(id === 'weixin'){
+				var node = document.getElementById('ewm4');
+				node.style.display = 'none';
+			}
+		}
+		//AJAX封装
+		function request(method, url, cb){
+			var xhr = new XMLHttpRequest();
+			xhr.open(method, url, true);
+			xhr.send();
+			xhr.onreadystatechange=function() {
+			  if (xhr.readyState==4 && xhr.status==200) {
+			     var news = xhr.responseText;
+			     cb(news);
+			  }
+			}
+		}
+		//热门歌单
+		request("GET","/remengedan",function(news){
+			var obj = JSON.parse(news);
+			for(var i = 0; i < obj.length; i++) {
+				RMGDblock(obj[i]);
+			}
+		});
+		function RMGDblock(index){
+			var chat = document.getElementById('left');
+			var node=document.createElement("div");
+			node.className = "block";
+			node.innerHTML = '<a href=""><img class="img" src="'+ index.picture+'"></a><a href=""><p>' +  index.text + '</p></a>';
+			chat.appendChild(node);
+		}
+		//新歌首发block
+		request("GET","/xingeshoufa",function(news){
+			var obj = JSON.parse(news);
+			for(var i = 0; i < obj.length; i++) {
+				XinGeShouFa(obj[i]);
+			}
+		});
+		function XinGeShouFa(index){
+			var chat = document.getElementById('block33');
+			var node=document.createElement("div");
+			node.className = "block4b";
+			node.innerHTML = '<a href=""><img class="img" src="' + index.picture + '"></a><a href=""><p>' + index.text1 + '</p><p class="name">' + index.text2 + '</p></a>';
+			chat.appendChild(node);
+		}
+		//排行榜左
+		request("GET","/PHBleft",function(news){
+			var obj = JSON.parse(news);
+			for(var i = 0; i < obj.length; i++) {
+				PHBleft(obj[i]);
+			}
+		});
+		function PHBleft(index){
+			var chat = document.getElementById('block41');
+			var node=document.createElement("div");
+			node.className = "b41Div2";
+			node.innerHTML = '<div style="width: 100%;"><p><b>'+index.num+'</b></p>  <a href=""><img class="img" src="'+index.pic+'"></a>  <div><a href=""><p>'+index.text1+'</p></a>  <a href=""><p class="name">'+index.text2+'</p></a></div>   <div><a href=""><img src="'+index.pic1+'"></a><a href=""><img src="'+index.pic2+'"></a><a href=""><img src="'+index.pic3+'"></a></div></div>';
+			chat.appendChild(node);
+		}
+		//排行榜中
+		request("GET","/PHBmiddle",function(news){
+			var obj = JSON.parse(news);
+			for(var i = 0; i < obj.length; i++) {
+				PHBmiddle(obj[i]);
+			}
+		});
+		function PHBmiddle(index){
+			var chat = document.getElementById('block42');
+			var node=document.createElement("div");
+			node.className = "b42Div2";
+			node.innerHTML = '<div style="width: 100%;"><p><b>'+index.num+'</b></p>  <a href=""><img class="img" src="'+index.pic+'"></a>  <div><a href=""><p>'+index.text1+'</p></a>  <a href=""><p class="name">'+index.text2+'</p></a></div>  <div><a href=""><img src="'+index.pic1+'"></a><a href=""><img src="'+index.pic2+'"></a><a href=""><img src="'+index.pic3+'"></a></div></div>';
+			chat.appendChild(node);
+		}
+		//排行榜右
+		request("GET","/PHBright",function(news){
+			var obj = JSON.parse(news);
+			for(var i = 0; i < obj.length; i++) {
+				PHBright(obj[i]);
+			}
+		});
+		function PHBright(index){
+			var chat = document.getElementById('block43');
+			var node = document.createElement("div");
+			node.className = "b43Div2";
+			node.innerHTML = '<div style="width: 100%;"><p><b>'+index.num+'</b></p>  <a href=""><img class="img" src="'+index.pic+'"></a>  <div><a href=""><p>'+index.text1+'</p></a>  <a href=""><p class="name">'+index.text2+'</p></a></div>  <div><a href=""><img src="'+index.pic1+'"></a><a href=""><img src="'+index.pic2+'"></a><a href=""><img src="'+index.pic3+'"></a></div></div>';
+			chat.appendChild(node);
+		}
+		//热门歌手
+		request("GET","/remengeshou",function(news){
+			var obj = JSON.parse(news);
+			for(var i = 0; i < obj.length; i++) {
+				remengeshou(obj[i]);
+			}
+		});
+		function remengeshou(index){
+			var chat = document.getElementById('block5');
+			var node = document.createElement("div");
+			node.className = "geshou";
+			node.innerHTML = '<a href=""><img class="img" src="'+index.pic+'"></a></br><a href=""><p>'+index.name+'</p></a>';
+			chat.appendChild(node);
+		}
+		//精选MV
+		request("GET","/jingxuanMV",function(news){
+			var obj = JSON.parse(news);
+			for(var i = 0; i < obj.length; i++) {
+				jingxuanMV(obj[i]);
+			}
+		});
+		function jingxuanMV(index){
+			var chat = document.getElementById('block6');
+			var node = document.createElement("div");
+			node.className = "b6mv";
+			node.innerHTML = '<a href=""><img class="img" src="'+ index.pic +'"></a><a href=""><p>'+ index.name1 +'</p></a><a href=""><p class="name">'+ index.name2 +'</p></a>';
+			chat.appendChild(node);
+		}
+		//热门活动
+		request("GET","/remenhuodong",function(news){
+			var obj = JSON.parse(news);
+			for(var i = 0; i < obj.length; i++) {
+				remenhuodong(obj[i]);
+			}
+		});
+		function remenhuodong(index){
+			var chat = document.getElementById('block7');
+			var node = document.createElement("div");
+			node.className = "b7hd";
+			node.innerHTML = '<a href=""><img class="img" src="'+index.pic+'"></a><a href=""><p>'+index.name+'</p></a>';
+			chat.appendChild(node);
+		}
+	</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title>QQ聊天</title>
+	<style type="text/css">
+		html,body{height: 100%;}
+		body{margin: 0;}
+		.chat{min-height: 100%;box-sizing: border-box; padding: 8px;padding-bottom: 60px; background-color: #ecedf1;}
+		.chat img{width: 30px;height: 30px;display: inline-block;border-radius: 100%;vertical-align: top;}
+		.chat>div>div{font-size: 12px;padding: 6px;display: inline-block;border-radius: 10px;}
+		
+		.self{text-align: right;margin-top: 13px;margin-bottom: 13px;}
+		.receive{text-align: left;margin-top: 13px;margin-bottom: 13px;}
+		.receive>div{background-color:#ffffff;width: 60%;}
+		.self>div{background-color: #02a7e3;text-align: left;width: 60%;color: #fbfeff;}
+
+		.send{width: 100%;height:7%; background-color: #ecedf1;border:none;position: fixed;bottom: 40px;box-sizing: border-box;margin:0;}
+		.send>input{width: 77%;height: 30px; margin-left: 3%;display: inline-block;box-sizing: border-box;border:none;border-radius: 3px;}
+		.send>button{width: 15%;height:30px; margin-right: 1%;display: inline-block;vertical-align: middle;font-size: 10px;background-color: #dddee2;border-radius: 5px;}
+
+		.button{background-color: #ecedf1;width: 100%;height: 30px; position: fixed;bottom: 0;padding-bottom: 10px;}
+		.button>a>img{width: 15%; display: inline-block;}
+	</style>
+</head>
+<body>
+	<div class="chat" id="chat1"></div>
+	<div class="send">
+		<input type="text" name="demo"/>
+		<button type="button" onclick="myfunction()">发送</button>
+	</div>
+	<script type="text/javascript">
+		request("GET","/qqchat3",function(news){
+			console.log(news);
+			var menv = news.split("\n");
+			console.log(menv);
+			for(var i = 0; i < menv.length-1; i++){
+				mdNews(menv[i]);
+			}
+		});
+		function request(method, url, cb){
+			var xhr = new XMLHttpRequest();
+			xhr.open(method, url, true);
+			xhr.send();
+			xhr.onreadystatechange=function() {
+			  if (xhr.readyState==4 && xhr.status==200) {
+			     var news = xhr.responseText;
+			     cb(news);
+			  }
+			}
+		}
+		function sendMessage(value){
+			request("GET","/qqchat2?qqchat=" + value,function(news){
+				mdNews(news);
+			});
+		}
+		function myfunction(){
+			var input = document.querySelector("input[name=demo]");
+			if(input.value!==""){
+				sendMessage(input.value);
+				var chat = document.getElementById('chat1');
+				var node=document.createElement("div");
+				node.className = "self";
+				node.innerHTML = '<div>' + input.value + '</div>';
+				chat.appendChild(node);
+				window.scrollTo(0,document.body.scrollHeight);
+				input.value='';
+			}
+		}
+		function mdNews(news){
+			var chat = document.getElementById('chat1');
+			var node1=document.createElement("div");
+			node1.className = "receive";
+			node1.innerHTML = '<div>' + news + '</div>';
+			chat.appendChild(node1);
+		}
+	</script>
+</body>
+</html>

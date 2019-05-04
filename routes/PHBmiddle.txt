@@ -1,0 +1,56 @@
+[
+{
+	"num":"01",
+	"pic":"/images/qianQianMusic/head21.png",
+	"text1":"卡路里",
+	"text2":"火箭少女101",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/i/mages/qianQianMusic/dowload.png"
+},
+{
+	"num":"02",
+	"pic":"/images/qianQianMusic/head22.png",
+	"text1":"往后余生",
+	"text2":"马良/孙茜茹",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"03",
+	"pic":"/images/qianQianMusic/head23.png",
+	"text1":"沙漠骆驼",
+	"text2":"展展与罗罗",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"04",
+	"pic":"/images/qianQianMusic/head24.png",
+	"text1":"只要平凡",
+	"text2":"张杰/张碧晨",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"05",
+	"pic":"/images/qianQianMusic/head25.png",
+	"text1":"生僻字",
+	"text2":"陈柯宇",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+},
+{
+	"num":"06",
+	"pic":"/images/qianQianMusic/head26.png",
+	"text1":"我的爱",
+	"text2":"许巍",
+	"pic1":"/images/qianQianMusic/play.png",
+	"pic2":"/images/qianQianMusic/add.png",
+	"pic3":"/images/qianQianMusic/dowload.png"
+}
+]

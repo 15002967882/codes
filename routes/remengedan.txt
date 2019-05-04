@@ -1,0 +1,34 @@
+[
+{
+	"picture":"/images/qianQianMusic/gif1.png",
+	"text":"网络情缘一线牵，爆款歌曲红遍天"
+},
+{
+	"picture":"/images/qianQianMusic/gif2.png",
+	"text":"好久不见，童年里的回忆之声"
+},
+{
+	"picture":"/images/qianQianMusic/gif3.png",
+	"text":"当我孤单的时候，我才最不孤独"
+},
+{
+	"picture":"/images/qianQianMusic/gif4.png",
+	"text":"千千音乐U榜第82期热门歌曲"
+},
+{
+	"picture":"/images/qianQianMusic/gif5.png",
+	"text":"仰望星空走过爱情的街角"
+},
+{
+	"picture":"/images/qianQianMusic/gif6.png",
+	"text":"戳心旋律|人人皆是酸菜鱼"
+},
+{
+	"picture":"/images/qianQianMusic/gif7.png",
+	"text":"这些来自摇滚老炮们的声音"
+},
+{
+	"picture":"/images/qianQianMusic/gif8.png",
+	"text":"让音乐来治愈你的小情绪"
+}
+]

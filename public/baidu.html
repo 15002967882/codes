@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>baidu</title>
+	<meta charset="utf-8"/>
+	<base href="www.baidu.html" target="_blank">
+			<style type="text/css">
+				.input1{
+					width: 40%;
+					height: 30px;
+					margin-right: -5px;
+					box-sizing: border-box;
+				}
+				.input2{
+					width: 15%;
+					height: 30px;
+				}
+			</style>
+</head>
+<body>
+	<div class="head">
+		<style type="text/css">
+			.head {
+				text-align: right;
+				padding-right: 10%;
+			}
+			div.head > a{
+				    color: #333;
+				    font-weight: 700;
+				    line-height: 24px;
+				    margin-left: 20px;
+				    font-size: 13px;
+				    text-decoration: underline;
+			}
+			a:hover {
+			    color: #00c;
+			}
+		</style>
+		<a href="http://www.news.com">新闻</a>
+		<a href="http://www.hao123.com">hao123</a>
+		<a href="http://www.map.com">地图</a>
+		<a href="http://www.shipin.com">视频</a>
+		<a href="http://www.tieba.com">贴吧</a>
+		<a href="http://www.xueshu.com">学术</a>
+		<a href="http://www.denglu.com">登录</a>
+		<a href="http://www.shezhi.com">设置</a>
+	</div>
+	<div class="pic1">
+		<style type="text/css">
+			.pic1{
+					text-align: center;
+				}
+			.pic1 > img{
+				width: 270px;
+				height: 129px;
+				}
+		</style>
+		<img  src="images/baidu/baidu1.jpg"/>
+	</div>
+	<div>
+		<style type="text/css">
+			.input{
+				text-align: center;
+				}
+		</style>
+		<div class="input">
+			<input class="input1" type="text" name="q" maxlength="255" />
+			<input class="input2" type="submit" name="baidu" value="百度一下" onclick="search()" />
+		</div>
+	</div>
+	<div class="pic2">
+		<style type="text/css">
+			.pic2{
+				text-align: center;
+				margin-top: 200px;
+			}
+		</style>
+		<img style="width: 60px;height: 60px;" src="images/baidu/pic2.jpg"/>
+		<p style="text-align: center;font-size: 12px;margin-top: 5px;">百度</p>
+	</div>
+	<div class="baidu">
+		<style type="text/css">
+			.baidu a{
+				font-size: 12px;
+				font-family: arial;
+				color: #999999;
+			}
+			.baidu p{
+				color: #999999;
+				font-size: 12px;
+				font-family: arial;
+			}
+		</style>
+		<div class="baidu1">
+			<style type="text/css">
+				.baidu1{
+					text-align: center;
+				}
+				.baidu1>a{
+					margin-right: 10px;
+				}
+			</style>
+			<a href="http://www.1.com">把百度设为主页</a>
+			<a href="http://www.1.com">关于百度</a>
+			<a href="http://www.1.com">AboutBaidu</a>
+			<a href="http://www.1.com">百度推广</a>
+		</div>
+		<div class="baidu2">
+			<style type="text/css">
+				.baidu2{
+					text-align: center;
+				}
+				.baidu2>a{
+					margin-right: 5px;
+					display: inline-block;
+				}
+				.baidu2>p{
+					display: inline-block;
+				}
+			</style>
+			<p>@2019 baiu</p>
+			<a href="http://www.1.com">使用百度前必须</a>
+			<a href="http://www.1.com">意见反馈</a>
+			<p>京ICP证130007号</p>
+			<a href="http://www.1.com">京公安网备000000111号</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function search() {
+			var input = document.querySelector("input[name=q]");
+			var searchText = 'https://www.baidu.com/s?wd='+input.value;
+			window.open(searchText);
+		}
+	</script>
+</body>
+</html>
