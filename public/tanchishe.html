@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>贪吃蛇</title>
+	<style type="text/css">
+		/*.table td{width: 20px;height: 20px;background-color: gray;}*/
+		.table{border-collapse:collapse;}
+		.snake{background-color: yellow!important;}
+		.food{background-color: red!important;}
+		.blank{width: 20px;height: 20px;background-color: gray!important;}
+	</style>
+</head>
+<body>
+	<audio src="/audio/bgMusic.mp3" autoplay="autoplay" loop="loop"></audio>
+	<table class="table">
+		<tbody>
+			<tr><td id="t0t0"></td><td id="t0t1"></td><td id="t0t2"></td><td id="t0t3"></td><td id="t0t4"></td><td id="t0t5"></td><td id="t0t6"></td><td id="t0t7"></td><td id="t0t8"></td><td id="t0t9"></td><td id="t0t10"></td><td id="t0t11"></td><td id="t0t12"></td><td id="t0t13"></td><td id="t0t14"></td><td id="t0t15"></td><td id="t0t16"></td><td id="t0t17"></td><td id="t0t18"></td><td id="t0t19"></td></tr>
+<tr><td id="t1t0"></td><td id="t1t1"></td><td id="t1t2"></td><td id="t1t3"></td><td id="t1t4"></td><td id="t1t5"></td><td id="t1t6"></td><td id="t1t7"></td><td id="t1t8"></td><td id="t1t9"></td><td id="t1t10"></td><td id="t1t11"></td><td id="t1t12"></td><td id="t1t13"></td><td id="t1t14"></td><td id="t1t15"></td><td id="t1t16"></td><td id="t1t17"></td><td id="t1t18"></td><td id="t1t19"></td></tr>
+<tr><td id="t2t0"></td><td id="t2t1"></td><td id="t2t2"></td><td id="t2t3"></td><td id="t2t4"></td><td id="t2t5"></td><td id="t2t6"></td><td id="t2t7"></td><td id="t2t8"></td><td id="t2t9"></td><td id="t2t10"></td><td id="t2t11"></td><td id="t2t12"></td><td id="t2t13"></td><td id="t2t14"></td><td id="t2t15"></td><td id="t2t16"></td><td id="t2t17"></td><td id="t2t18"></td><td id="t2t19"></td></tr>
+<tr><td id="t3t0"></td><td id="t3t1"></td><td id="t3t2"></td><td id="t3t3"></td><td id="t3t4"></td><td id="t3t5"></td><td id="t3t6"></td><td id="t3t7"></td><td id="t3t8"></td><td id="t3t9"></td><td id="t3t10"></td><td id="t3t11"></td><td id="t3t12"></td><td id="t3t13"></td><td id="t3t14"></td><td id="t3t15"></td><td id="t3t16"></td><td id="t3t17"></td><td id="t3t18"></td><td id="t3t19"></td></tr>
+<tr><td id="t4t0"></td><td id="t4t1"></td><td id="t4t2"></td><td id="t4t3"></td><td id="t4t4"></td><td id="t4t5"></td><td id="t4t6"></td><td id="t4t7"></td><td id="t4t8"></td><td id="t4t9"></td><td id="t4t10"></td><td id="t4t11"></td><td id="t4t12"></td><td id="t4t13"></td><td id="t4t14"></td><td id="t4t15"></td><td id="t4t16"></td><td id="t4t17"></td><td id="t4t18"></td><td id="t4t19"></td></tr>
+<tr><td id="t5t0"></td><td id="t5t1"></td><td id="t5t2"></td><td id="t5t3"></td><td id="t5t4"></td><td id="t5t5"></td><td id="t5t6"></td><td id="t5t7"></td><td id="t5t8"></td><td id="t5t9"></td><td id="t5t10"></td><td id="t5t11"></td><td id="t5t12"></td><td id="t5t13"></td><td id="t5t14"></td><td id="t5t15"></td><td id="t5t16"></td><td id="t5t17"></td><td id="t5t18"></td><td id="t5t19"></td></tr>
+<tr><td id="t6t0"></td><td id="t6t1"></td><td id="t6t2"></td><td id="t6t3"></td><td id="t6t4"></td><td id="t6t5"></td><td id="t6t6"></td><td id="t6t7"></td><td id="t6t8"></td><td id="t6t9"></td><td id="t6t10"></td><td id="t6t11"></td><td id="t6t12"></td><td id="t6t13"></td><td id="t6t14"></td><td id="t6t15"></td><td id="t6t16"></td><td id="t6t17"></td><td id="t6t18"></td><td id="t6t19"></td></tr>
+<tr><td id="t7t0"></td><td id="t7t1"></td><td id="t7t2"></td><td id="t7t3"></td><td id="t7t4"></td><td id="t7t5"></td><td id="t7t6"></td><td id="t7t7"></td><td id="t7t8"></td><td id="t7t9"></td><td id="t7t10"></td><td id="t7t11"></td><td id="t7t12"></td><td id="t7t13"></td><td id="t7t14"></td><td id="t7t15"></td><td id="t7t16"></td><td id="t7t17"></td><td id="t7t18"></td><td id="t7t19"></td></tr>
+<tr><td id="t8t0"></td><td id="t8t1"></td><td id="t8t2"></td><td id="t8t3"></td><td id="t8t4"></td><td id="t8t5"></td><td id="t8t6"></td><td id="t8t7"></td><td id="t8t8"></td><td id="t8t9"></td><td id="t8t10"></td><td id="t8t11"></td><td id="t8t12"></td><td id="t8t13"></td><td id="t8t14"></td><td id="t8t15"></td><td id="t8t16"></td><td id="t8t17"></td><td id="t8t18"></td><td id="t8t19"></td></tr>
+<tr><td id="t9t0"></td><td id="t9t1"></td><td id="t9t2"></td><td id="t9t3"></td><td id="t9t4"></td><td id="t9t5"></td><td id="t9t6"></td><td id="t9t7"></td><td id="t9t8"></td><td id="t9t9"></td><td id="t9t10"></td><td id="t9t11"></td><td id="t9t12"></td><td id="t9t13"></td><td id="t9t14"></td><td id="t9t15"></td><td id="t9t16"></td><td id="t9t17"></td><td id="t9t18"></td><td id="t9t19"></td></tr>
+<tr><td id="t10t0"></td><td id="t10t1"></td><td id="t10t2"></td><td id="t10t3"></td><td id="t10t4"></td><td id="t10t5"></td><td id="t10t6"></td><td id="t10t7"></td><td id="t10t8"></td><td id="t10t9"></td><td id="t10t10"></td><td id="t10t11"></td><td id="t10t12"></td><td id="t10t13"></td><td id="t10t14"></td><td id="t10t15"></td><td id="t10t16"></td><td id="t10t17"></td><td id="t10t18"></td><td id="t10t19"></td></tr>
+<tr><td id="t11t0"></td><td id="t11t1"></td><td id="t11t2"></td><td id="t11t3"></td><td id="t11t4"></td><td id="t11t5"></td><td id="t11t6"></td><td id="t11t7"></td><td id="t11t8"></td><td id="t11t9"></td><td id="t11t10"></td><td id="t11t11"></td><td id="t11t12"></td><td id="t11t13"></td><td id="t11t14"></td><td id="t11t15"></td><td id="t11t16"></td><td id="t11t17"></td><td id="t11t18"></td><td id="t11t19"></td></tr>
+<tr><td id="t12t0"></td><td id="t12t1"></td><td id="t12t2"></td><td id="t12t3"></td><td id="t12t4"></td><td id="t12t5"></td><td id="t12t6"></td><td id="t12t7"></td><td id="t12t8"></td><td id="t12t9"></td><td id="t12t10"></td><td id="t12t11"></td><td id="t12t12"></td><td id="t12t13"></td><td id="t12t14"></td><td id="t12t15"></td><td id="t12t16"></td><td id="t12t17"></td><td id="t12t18"></td><td id="t12t19"></td></tr>
+<tr><td id="t13t0"></td><td id="t13t1"></td><td id="t13t2"></td><td id="t13t3"></td><td id="t13t4"></td><td id="t13t5"></td><td id="t13t6"></td><td id="t13t7"></td><td id="t13t8"></td><td id="t13t9"></td><td id="t13t10"></td><td id="t13t11"></td><td id="t13t12"></td><td id="t13t13"></td><td id="t13t14"></td><td id="t13t15"></td><td id="t13t16"></td><td id="t13t17"></td><td id="t13t18"></td><td id="t13t19"></td></tr>
+<tr><td id="t14t0"></td><td id="t14t1"></td><td id="t14t2"></td><td id="t14t3"></td><td id="t14t4"></td><td id="t14t5"></td><td id="t14t6"></td><td id="t14t7"></td><td id="t14t8"></td><td id="t14t9"></td><td id="t14t10"></td><td id="t14t11"></td><td id="t14t12"></td><td id="t14t13"></td><td id="t14t14"></td><td id="t14t15"></td><td id="t14t16"></td><td id="t14t17"></td><td id="t14t18"></td><td id="t14t19"></td></tr>
+<tr><td id="t15t0"></td><td id="t15t1"></td><td id="t15t2"></td><td id="t15t3"></td><td id="t15t4"></td><td id="t15t5"></td><td id="t15t6"></td><td id="t15t7"></td><td id="t15t8"></td><td id="t15t9"></td><td id="t15t10"></td><td id="t15t11"></td><td id="t15t12"></td><td id="t15t13"></td><td id="t15t14"></td><td id="t15t15"></td><td id="t15t16"></td><td id="t15t17"></td><td id="t15t18"></td><td id="t15t19"></td></tr>
+<tr><td id="t16t0"></td><td id="t16t1"></td><td id="t16t2"></td><td id="t16t3"></td><td id="t16t4"></td><td id="t16t5"></td><td id="t16t6"></td><td id="t16t7"></td><td id="t16t8"></td><td id="t16t9"></td><td id="t16t10"></td><td id="t16t11"></td><td id="t16t12"></td><td id="t16t13"></td><td id="t16t14"></td><td id="t16t15"></td><td id="t16t16"></td><td id="t16t17"></td><td id="t16t18"></td><td id="t16t19"></td></tr>
+<tr><td id="t17t0"></td><td id="t17t1"></td><td id="t17t2"></td><td id="t17t3"></td><td id="t17t4"></td><td id="t17t5"></td><td id="t17t6"></td><td id="t17t7"></td><td id="t17t8"></td><td id="t17t9"></td><td id="t17t10"></td><td id="t17t11"></td><td id="t17t12"></td><td id="t17t13"></td><td id="t17t14"></td><td id="t17t15"></td><td id="t17t16"></td><td id="t17t17"></td><td id="t17t18"></td><td id="t17t19"></td></tr>
+<tr><td id="t18t0"></td><td id="t18t1"></td><td id="t18t2"></td><td id="t18t3"></td><td id="t18t4"></td><td id="t18t5"></td><td id="t18t6"></td><td id="t18t7"></td><td id="t18t8"></td><td id="t18t9"></td><td id="t18t10"></td><td id="t18t11"></td><td id="t18t12"></td><td id="t18t13"></td><td id="t18t14"></td><td id="t18t15"></td><td id="t18t16"></td><td id="t18t17"></td><td id="t18t18"></td><td id="t18t19"></td></tr>
+<tr><td id="t19t0"></td><td id="t19t1"></td><td id="t19t2"></td><td id="t19t3"></td><td id="t19t4"></td><td id="t19t5"></td><td id="t19t6"></td><td id="t19t7"></td><td id="t19t8"></td><td id="t19t9"></td><td id="t19t10"></td><td id="t19t11"></td><td id="t19t12"></td><td id="t19t13"></td><td id="t19t14"></td><td id="t19t15"></td><td id="t19t16"></td><td id="t19t17"></td><td id="t19t18"></td><td id="t19t19"></td></tr>
+		</tbody>
+	</table>
+
+	<script type="text/javascript">
+		var x = 0;
+		var y = 0
+		var direction = 0;
+		var LEFT = 37, UP = 38, RIGHT = 39, DOWN = 40;
+		var board = [];
+		var BLANK = 1, WALL = 2, FOOD = 3, SNAKE = 4;
+		var boardWidth = 20,boardHeight = 20;
+		var snake = [{x:0,y:0},{x:0,y:1},{x:0,y:2},{x:0,y:3},{x:0,y:4}];
+
+		for(var i = 0;i < boardHeight; i++){
+			var row = [];
+			for(var j = 0;j < boardWidth; j++){
+				if(i === 0 || i === (boardHeight-1) || j === 0 || j=== (boardWidth-1)){
+					row.push(WALL);
+				}
+				else{
+					row.push(BLANK);
+				}
+			}
+			board.push(row);
+		}
+		//生成食物
+		function makeFood(){
+			var x = Math.floor(Math.random()*(boardWidth-1));
+			var y = Math.floor(Math.random()*(boardHeight-1));
+			return {x:x,y:y};
+		}
+		var food = makeFood();
+		board[food.x][food.y] = FOOD;
+		//画出蛇
+		for(var i = 0; i < snake.length; i++){
+			board[snake[i].x][snake[i].y] = SNAKE;
+		}
+		// console.log(board);
+
+		function draw(){
+			for(var i = 0;i < boardHeight; i++){
+				for(var j = 0;j < boardWidth; j++){
+					var node = document.getElementById("t"+ i + "t" + j);
+					if(board[i][j] === BLANK){
+						node.className = "blank";
+					}
+					else if(board[i][j] === WALL){
+						node.className = "blank";
+					}
+					else if(board[i][j] === SNAKE){
+						node.className = "snake";
+					}
+					else if(board[i][j] === FOOD){
+						node.className = "food";
+					}
+				}
+			}
+		}
+
+		document.onkeydown = function(){
+		    var oEvent = window.event;
+		    // console.log(oEvent.keyCode);
+		    direction = oEvent.keyCode; 
+		    snakeMove();
+			snakeDirection();
+		}
+
+		function snakeMove(){
+			board[snake[0].x][snake[0].y] = BLANK;    
+		    for(var i = 0; i < snake.length-1; i++){
+		    	snake[i].x = snake[i+1].x;
+		    	snake[i].y = snake[i+1].y;		    	
+			}
+		}
+		function snakeDirection(){
+			 switch(direction){
+				case LEFT:
+					snakeMove();
+					snake[snake.length-1].y--;
+					break;
+				case UP:
+					snakeMove();
+					snake[snake.length-1].x--;
+					break;  
+				case RIGHT:
+					snakeMove();
+					snake[snake.length-1].y++;
+					break;
+				case DOWN:
+					snakeMove();
+					snake[snake.length-1].x++;
+					break; 
+			}
+			if(snake[snake.length-1].x>=boardHeight || snake[snake.length-1].x<0 || snake[snake.length-1].y >= boardWidth || snake[snake.length-1].y < 0){
+				alert("撞死了");
+			}
+			else if(board[snake[snake.length-1].x][snake[snake.length-1].y] === FOOD){
+				snake.push({x:snake[snake.length-1].x,y:snake[snake.length-1].y});
+				var food = makeFood();
+				board[food.x][food.y] = FOOD;
+			}
+			for(var i = 0; i < snake.length; i++){
+				board[snake[i].x][snake[i].y] = SNAKE;
+			}
+		}
+
+		setInterval(function(){		
+			snakeDirection();
+		},500)
+		setInterval(function(){			
+			draw();	
+		}, 40)
+	
+		// function makeTd(i, j) {
+		// 	return '<td id="t' + String(i) + 't' + String(j) + '"></td>'
+		// }
+		// var str = '';
+		// for (var i = 0; i < 20; i ++) {
+		// 	var tempStr = '<tr>';
+		// 	for (var j = 0; j < 20; j ++) {
+		// 		tempStr += makeTd(i, j);
+		// 	}
+		// 	tempStr += '</tr>\n';
+		// 	str += tempStr;
+		// }
+		// console.log(str)
+	</script>
+</body>
+</html>

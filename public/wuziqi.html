@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>五子棋</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.table{border-collapse: collapse; background-color: gray;}
+		.table td{width: 20px;height: 20px;border: solid 1px; border-color: black!important;border-radius: 100px;}
+		.white{background-color: white;}
+		.black{background-color: black;}
+		.null{background-color: gray;}
+	</style>
+</head>
+<body>
+	<table class="table">
+		<tbody>
+			<tr><td id="t0t0" onclick="mouseDown(0,0)"></td><td id="t0t1" onclick="mouseDown(0,1)"></td><td id="t0t2" onclick="mouseDown(0,2)"></td><td id="t0t3" onclick="mouseDown(0,3)"></td><td id="t0t4" onclick="mouseDown(0,4)"></td><td id="t0t5" onclick="mouseDown(0,5)"></td><td id="t0t6" onclick="mouseDown(0,6)"></td><td id="t0t7" onclick="mouseDown(0,7)"></td><td id="t0t8" onclick="mouseDown(0,8)"></td><td id="t0t9" onclick="mouseDown(0,9)"></td><td id="t0t10" onclick="mouseDown(0,10)"></td><td id="t0t11" onclick="mouseDown(0,11)"></td><td id="t0t12" onclick="mouseDown(0,12)"></td><td id="t0t13" onclick="mouseDown(0,13)"></td><td id="t0t14" onclick="mouseDown(0,14)"></td><td id="t0t15" onclick="mouseDown(0,15)"></td><td id="t0t16" onclick="mouseDown(0,16)"></td><td id="t0t17" onclick="mouseDown(0,17)"></td><td id="t0t18" onclick="mouseDown(0,18)"></td><td id="t0t19" onclick="mouseDown(0,19)"></td></tr>
+<tr><td id="t1t0" onclick="mouseDown(1,0)"></td><td id="t1t1" onclick="mouseDown(1,1)"></td><td id="t1t2" onclick="mouseDown(1,2)"></td><td id="t1t3" onclick="mouseDown(1,3)"></td><td id="t1t4" onclick="mouseDown(1,4)"></td><td id="t1t5" onclick="mouseDown(1,5)"></td><td id="t1t6" onclick="mouseDown(1,6)"></td><td id="t1t7" onclick="mouseDown(1,7)"></td><td id="t1t8" onclick="mouseDown(1,8)"></td><td id="t1t9" onclick="mouseDown(1,9)"></td><td id="t1t10" onclick="mouseDown(1,10)"></td><td id="t1t11" onclick="mouseDown(1,11)"></td><td id="t1t12" onclick="mouseDown(1,12)"></td><td id="t1t13" onclick="mouseDown(1,13)"></td><td id="t1t14" onclick="mouseDown(1,14)"></td><td id="t1t15" onclick="mouseDown(1,15)"></td><td id="t1t16" onclick="mouseDown(1,16)"></td><td id="t1t17" onclick="mouseDown(1,17)"></td><td id="t1t18" onclick="mouseDown(1,18)"></td><td id="t1t19" onclick="mouseDown(1,19)"></td></tr>
+<tr><td id="t2t0" onclick="mouseDown(2,0)"></td><td id="t2t1" onclick="mouseDown(2,1)"></td><td id="t2t2" onclick="mouseDown(2,2)"></td><td id="t2t3" onclick="mouseDown(2,3)"></td><td id="t2t4" onclick="mouseDown(2,4)"></td><td id="t2t5" onclick="mouseDown(2,5)"></td><td id="t2t6" onclick="mouseDown(2,6)"></td><td id="t2t7" onclick="mouseDown(2,7)"></td><td id="t2t8" onclick="mouseDown(2,8)"></td><td id="t2t9" onclick="mouseDown(2,9)"></td><td id="t2t10" onclick="mouseDown(2,10)"></td><td id="t2t11" onclick="mouseDown(2,11)"></td><td id="t2t12" onclick="mouseDown(2,12)"></td><td id="t2t13" onclick="mouseDown(2,13)"></td><td id="t2t14" onclick="mouseDown(2,14)"></td><td id="t2t15" onclick="mouseDown(2,15)"></td><td id="t2t16" onclick="mouseDown(2,16)"></td><td id="t2t17" onclick="mouseDown(2,17)"></td><td id="t2t18" onclick="mouseDown(2,18)"></td><td id="t2t19" onclick="mouseDown(2,19)"></td></tr>
+<tr><td id="t3t0" onclick="mouseDown(3,0)"></td><td id="t3t1" onclick="mouseDown(3,1)"></td><td id="t3t2" onclick="mouseDown(3,2)"></td><td id="t3t3" onclick="mouseDown(3,3)"></td><td id="t3t4" onclick="mouseDown(3,4)"></td><td id="t3t5" onclick="mouseDown(3,5)"></td><td id="t3t6" onclick="mouseDown(3,6)"></td><td id="t3t7" onclick="mouseDown(3,7)"></td><td id="t3t8" onclick="mouseDown(3,8)"></td><td id="t3t9" onclick="mouseDown(3,9)"></td><td id="t3t10" onclick="mouseDown(3,10)"></td><td id="t3t11" onclick="mouseDown(3,11)"></td><td id="t3t12" onclick="mouseDown(3,12)"></td><td id="t3t13" onclick="mouseDown(3,13)"></td><td id="t3t14" onclick="mouseDown(3,14)"></td><td id="t3t15" onclick="mouseDown(3,15)"></td><td id="t3t16" onclick="mouseDown(3,16)"></td><td id="t3t17" onclick="mouseDown(3,17)"></td><td id="t3t18" onclick="mouseDown(3,18)"></td><td id="t3t19" onclick="mouseDown(3,19)"></td></tr>
+<tr><td id="t4t0" onclick="mouseDown(4,0)"></td><td id="t4t1" onclick="mouseDown(4,1)"></td><td id="t4t2" onclick="mouseDown(4,2)"></td><td id="t4t3" onclick="mouseDown(4,3)"></td><td id="t4t4" onclick="mouseDown(4,4)"></td><td id="t4t5" onclick="mouseDown(4,5)"></td><td id="t4t6" onclick="mouseDown(4,6)"></td><td id="t4t7" onclick="mouseDown(4,7)"></td><td id="t4t8" onclick="mouseDown(4,8)"></td><td id="t4t9" onclick="mouseDown(4,9)"></td><td id="t4t10" onclick="mouseDown(4,10)"></td><td id="t4t11" onclick="mouseDown(4,11)"></td><td id="t4t12" onclick="mouseDown(4,12)"></td><td id="t4t13" onclick="mouseDown(4,13)"></td><td id="t4t14" onclick="mouseDown(4,14)"></td><td id="t4t15" onclick="mouseDown(4,15)"></td><td id="t4t16" onclick="mouseDown(4,16)"></td><td id="t4t17" onclick="mouseDown(4,17)"></td><td id="t4t18" onclick="mouseDown(4,18)"></td><td id="t4t19" onclick="mouseDown(4,19)"></td></tr>
+<tr><td id="t5t0" onclick="mouseDown(5,0)"></td><td id="t5t1" onclick="mouseDown(5,1)"></td><td id="t5t2" onclick="mouseDown(5,2)"></td><td id="t5t3" onclick="mouseDown(5,3)"></td><td id="t5t4" onclick="mouseDown(5,4)"></td><td id="t5t5" onclick="mouseDown(5,5)"></td><td id="t5t6" onclick="mouseDown(5,6)"></td><td id="t5t7" onclick="mouseDown(5,7)"></td><td id="t5t8" onclick="mouseDown(5,8)"></td><td id="t5t9" onclick="mouseDown(5,9)"></td><td id="t5t10" onclick="mouseDown(5,10)"></td><td id="t5t11" onclick="mouseDown(5,11)"></td><td id="t5t12" onclick="mouseDown(5,12)"></td><td id="t5t13" onclick="mouseDown(5,13)"></td><td id="t5t14" onclick="mouseDown(5,14)"></td><td id="t5t15" onclick="mouseDown(5,15)"></td><td id="t5t16" onclick="mouseDown(5,16)"></td><td id="t5t17" onclick="mouseDown(5,17)"></td><td id="t5t18" onclick="mouseDown(5,18)"></td><td id="t5t19" onclick="mouseDown(5,19)"></td></tr>
+<tr><td id="t6t0" onclick="mouseDown(6,0)"></td><td id="t6t1" onclick="mouseDown(6,1)"></td><td id="t6t2" onclick="mouseDown(6,2)"></td><td id="t6t3" onclick="mouseDown(6,3)"></td><td id="t6t4" onclick="mouseDown(6,4)"></td><td id="t6t5" onclick="mouseDown(6,5)"></td><td id="t6t6" onclick="mouseDown(6,6)"></td><td id="t6t7" onclick="mouseDown(6,7)"></td><td id="t6t8" onclick="mouseDown(6,8)"></td><td id="t6t9" onclick="mouseDown(6,9)"></td><td id="t6t10" onclick="mouseDown(6,10)"></td><td id="t6t11" onclick="mouseDown(6,11)"></td><td id="t6t12" onclick="mouseDown(6,12)"></td><td id="t6t13" onclick="mouseDown(6,13)"></td><td id="t6t14" onclick="mouseDown(6,14)"></td><td id="t6t15" onclick="mouseDown(6,15)"></td><td id="t6t16" onclick="mouseDown(6,16)"></td><td id="t6t17" onclick="mouseDown(6,17)"></td><td id="t6t18" onclick="mouseDown(6,18)"></td><td id="t6t19" onclick="mouseDown(6,19)"></td></tr>
+<tr><td id="t7t0" onclick="mouseDown(7,0)"></td><td id="t7t1" onclick="mouseDown(7,1)"></td><td id="t7t2" onclick="mouseDown(7,2)"></td><td id="t7t3" onclick="mouseDown(7,3)"></td><td id="t7t4" onclick="mouseDown(7,4)"></td><td id="t7t5" onclick="mouseDown(7,5)"></td><td id="t7t6" onclick="mouseDown(7,6)"></td><td id="t7t7" onclick="mouseDown(7,7)"></td><td id="t7t8" onclick="mouseDown(7,8)"></td><td id="t7t9" onclick="mouseDown(7,9)"></td><td id="t7t10" onclick="mouseDown(7,10)"></td><td id="t7t11" onclick="mouseDown(7,11)"></td><td id="t7t12" onclick="mouseDown(7,12)"></td><td id="t7t13" onclick="mouseDown(7,13)"></td><td id="t7t14" onclick="mouseDown(7,14)"></td><td id="t7t15" onclick="mouseDown(7,15)"></td><td id="t7t16" onclick="mouseDown(7,16)"></td><td id="t7t17" onclick="mouseDown(7,17)"></td><td id="t7t18" onclick="mouseDown(7,18)"></td><td id="t7t19" onclick="mouseDown(7,19)"></td></tr>
+<tr><td id="t8t0" onclick="mouseDown(8,0)"></td><td id="t8t1" onclick="mouseDown(8,1)"></td><td id="t8t2" onclick="mouseDown(8,2)"></td><td id="t8t3" onclick="mouseDown(8,3)"></td><td id="t8t4" onclick="mouseDown(8,4)"></td><td id="t8t5" onclick="mouseDown(8,5)"></td><td id="t8t6" onclick="mouseDown(8,6)"></td><td id="t8t7" onclick="mouseDown(8,7)"></td><td id="t8t8" onclick="mouseDown(8,8)"></td><td id="t8t9" onclick="mouseDown(8,9)"></td><td id="t8t10" onclick="mouseDown(8,10)"></td><td id="t8t11" onclick="mouseDown(8,11)"></td><td id="t8t12" onclick="mouseDown(8,12)"></td><td id="t8t13" onclick="mouseDown(8,13)"></td><td id="t8t14" onclick="mouseDown(8,14)"></td><td id="t8t15" onclick="mouseDown(8,15)"></td><td id="t8t16" onclick="mouseDown(8,16)"></td><td id="t8t17" onclick="mouseDown(8,17)"></td><td id="t8t18" onclick="mouseDown(8,18)"></td><td id="t8t19" onclick="mouseDown(8,19)"></td></tr>
+<tr><td id="t9t0" onclick="mouseDown(9,0)"></td><td id="t9t1" onclick="mouseDown(9,1)"></td><td id="t9t2" onclick="mouseDown(9,2)"></td><td id="t9t3" onclick="mouseDown(9,3)"></td><td id="t9t4" onclick="mouseDown(9,4)"></td><td id="t9t5" onclick="mouseDown(9,5)"></td><td id="t9t6" onclick="mouseDown(9,6)"></td><td id="t9t7" onclick="mouseDown(9,7)"></td><td id="t9t8" onclick="mouseDown(9,8)"></td><td id="t9t9" onclick="mouseDown(9,9)"></td><td id="t9t10" onclick="mouseDown(9,10)"></td><td id="t9t11" onclick="mouseDown(9,11)"></td><td id="t9t12" onclick="mouseDown(9,12)"></td><td id="t9t13" onclick="mouseDown(9,13)"></td><td id="t9t14" onclick="mouseDown(9,14)"></td><td id="t9t15" onclick="mouseDown(9,15)"></td><td id="t9t16" onclick="mouseDown(9,16)"></td><td id="t9t17" onclick="mouseDown(9,17)"></td><td id="t9t18" onclick="mouseDown(9,18)"></td><td id="t9t19" onclick="mouseDown(9,19)"></td></tr>
+<tr><td id="t10t0" onclick="mouseDown(10,0)"></td><td id="t10t1" onclick="mouseDown(10,1)"></td><td id="t10t2" onclick="mouseDown(10,2)"></td><td id="t10t3" onclick="mouseDown(10,3)"></td><td id="t10t4" onclick="mouseDown(10,4)"></td><td id="t10t5" onclick="mouseDown(10,5)"></td><td id="t10t6" onclick="mouseDown(10,6)"></td><td id="t10t7" onclick="mouseDown(10,7)"></td><td id="t10t8" onclick="mouseDown(10,8)"></td><td id="t10t9" onclick="mouseDown(10,9)"></td><td id="t10t10" onclick="mouseDown(10,10)"></td><td id="t10t11" onclick="mouseDown(10,11)"></td><td id="t10t12" onclick="mouseDown(10,12)"></td><td id="t10t13" onclick="mouseDown(10,13)"></td><td id="t10t14" onclick="mouseDown(10,14)"></td><td id="t10t15" onclick="mouseDown(10,15)"></td><td id="t10t16" onclick="mouseDown(10,16)"></td><td id="t10t17" onclick="mouseDown(10,17)"></td><td id="t10t18" onclick="mouseDown(10,18)"></td><td id="t10t19" onclick="mouseDown(10,19)"></td></tr>
+<tr><td id="t11t0" onclick="mouseDown(11,0)"></td><td id="t11t1" onclick="mouseDown(11,1)"></td><td id="t11t2" onclick="mouseDown(11,2)"></td><td id="t11t3" onclick="mouseDown(11,3)"></td><td id="t11t4" onclick="mouseDown(11,4)"></td><td id="t11t5" onclick="mouseDown(11,5)"></td><td id="t11t6" onclick="mouseDown(11,6)"></td><td id="t11t7" onclick="mouseDown(11,7)"></td><td id="t11t8" onclick="mouseDown(11,8)"></td><td id="t11t9" onclick="mouseDown(11,9)"></td><td id="t11t10" onclick="mouseDown(11,10)"></td><td id="t11t11" onclick="mouseDown(11,11)"></td><td id="t11t12" onclick="mouseDown(11,12)"></td><td id="t11t13" onclick="mouseDown(11,13)"></td><td id="t11t14" onclick="mouseDown(11,14)"></td><td id="t11t15" onclick="mouseDown(11,15)"></td><td id="t11t16" onclick="mouseDown(11,16)"></td><td id="t11t17" onclick="mouseDown(11,17)"></td><td id="t11t18" onclick="mouseDown(11,18)"></td><td id="t11t19" onclick="mouseDown(11,19)"></td></tr>
+<tr><td id="t12t0" onclick="mouseDown(12,0)"></td><td id="t12t1" onclick="mouseDown(12,1)"></td><td id="t12t2" onclick="mouseDown(12,2)"></td><td id="t12t3" onclick="mouseDown(12,3)"></td><td id="t12t4" onclick="mouseDown(12,4)"></td><td id="t12t5" onclick="mouseDown(12,5)"></td><td id="t12t6" onclick="mouseDown(12,6)"></td><td id="t12t7" onclick="mouseDown(12,7)"></td><td id="t12t8" onclick="mouseDown(12,8)"></td><td id="t12t9" onclick="mouseDown(12,9)"></td><td id="t12t10" onclick="mouseDown(12,10)"></td><td id="t12t11" onclick="mouseDown(12,11)"></td><td id="t12t12" onclick="mouseDown(12,12)"></td><td id="t12t13" onclick="mouseDown(12,13)"></td><td id="t12t14" onclick="mouseDown(12,14)"></td><td id="t12t15" onclick="mouseDown(12,15)"></td><td id="t12t16" onclick="mouseDown(12,16)"></td><td id="t12t17" onclick="mouseDown(12,17)"></td><td id="t12t18" onclick="mouseDown(12,18)"></td><td id="t12t19" onclick="mouseDown(12,19)"></td></tr>
+<tr><td id="t13t0" onclick="mouseDown(13,0)"></td><td id="t13t1" onclick="mouseDown(13,1)"></td><td id="t13t2" onclick="mouseDown(13,2)"></td><td id="t13t3" onclick="mouseDown(13,3)"></td><td id="t13t4" onclick="mouseDown(13,4)"></td><td id="t13t5" onclick="mouseDown(13,5)"></td><td id="t13t6" onclick="mouseDown(13,6)"></td><td id="t13t7" onclick="mouseDown(13,7)"></td><td id="t13t8" onclick="mouseDown(13,8)"></td><td id="t13t9" onclick="mouseDown(13,9)"></td><td id="t13t10" onclick="mouseDown(13,10)"></td><td id="t13t11" onclick="mouseDown(13,11)"></td><td id="t13t12" onclick="mouseDown(13,12)"></td><td id="t13t13" onclick="mouseDown(13,13)"></td><td id="t13t14" onclick="mouseDown(13,14)"></td><td id="t13t15" onclick="mouseDown(13,15)"></td><td id="t13t16" onclick="mouseDown(13,16)"></td><td id="t13t17" onclick="mouseDown(13,17)"></td><td id="t13t18" onclick="mouseDown(13,18)"></td><td id="t13t19" onclick="mouseDown(13,19)"></td></tr>
+<tr><td id="t14t0" onclick="mouseDown(14,0)"></td><td id="t14t1" onclick="mouseDown(14,1)"></td><td id="t14t2" onclick="mouseDown(14,2)"></td><td id="t14t3" onclick="mouseDown(14,3)"></td><td id="t14t4" onclick="mouseDown(14,4)"></td><td id="t14t5" onclick="mouseDown(14,5)"></td><td id="t14t6" onclick="mouseDown(14,6)"></td><td id="t14t7" onclick="mouseDown(14,7)"></td><td id="t14t8" onclick="mouseDown(14,8)"></td><td id="t14t9" onclick="mouseDown(14,9)"></td><td id="t14t10" onclick="mouseDown(14,10)"></td><td id="t14t11" onclick="mouseDown(14,11)"></td><td id="t14t12" onclick="mouseDown(14,12)"></td><td id="t14t13" onclick="mouseDown(14,13)"></td><td id="t14t14" onclick="mouseDown(14,14)"></td><td id="t14t15" onclick="mouseDown(14,15)"></td><td id="t14t16" onclick="mouseDown(14,16)"></td><td id="t14t17" onclick="mouseDown(14,17)"></td><td id="t14t18" onclick="mouseDown(14,18)"></td><td id="t14t19" onclick="mouseDown(14,19)"></td></tr>
+<tr><td id="t15t0" onclick="mouseDown(15,0)"></td><td id="t15t1" onclick="mouseDown(15,1)"></td><td id="t15t2" onclick="mouseDown(15,2)"></td><td id="t15t3" onclick="mouseDown(15,3)"></td><td id="t15t4" onclick="mouseDown(15,4)"></td><td id="t15t5" onclick="mouseDown(15,5)"></td><td id="t15t6" onclick="mouseDown(15,6)"></td><td id="t15t7" onclick="mouseDown(15,7)"></td><td id="t15t8" onclick="mouseDown(15,8)"></td><td id="t15t9" onclick="mouseDown(15,9)"></td><td id="t15t10" onclick="mouseDown(15,10)"></td><td id="t15t11" onclick="mouseDown(15,11)"></td><td id="t15t12" onclick="mouseDown(15,12)"></td><td id="t15t13" onclick="mouseDown(15,13)"></td><td id="t15t14" onclick="mouseDown(15,14)"></td><td id="t15t15" onclick="mouseDown(15,15)"></td><td id="t15t16" onclick="mouseDown(15,16)"></td><td id="t15t17" onclick="mouseDown(15,17)"></td><td id="t15t18" onclick="mouseDown(15,18)"></td><td id="t15t19" onclick="mouseDown(15,19)"></td></tr>
+<tr><td id="t16t0" onclick="mouseDown(16,0)"></td><td id="t16t1" onclick="mouseDown(16,1)"></td><td id="t16t2" onclick="mouseDown(16,2)"></td><td id="t16t3" onclick="mouseDown(16,3)"></td><td id="t16t4" onclick="mouseDown(16,4)"></td><td id="t16t5" onclick="mouseDown(16,5)"></td><td id="t16t6" onclick="mouseDown(16,6)"></td><td id="t16t7" onclick="mouseDown(16,7)"></td><td id="t16t8" onclick="mouseDown(16,8)"></td><td id="t16t9" onclick="mouseDown(16,9)"></td><td id="t16t10" onclick="mouseDown(16,10)"></td><td id="t16t11" onclick="mouseDown(16,11)"></td><td id="t16t12" onclick="mouseDown(16,12)"></td><td id="t16t13" onclick="mouseDown(16,13)"></td><td id="t16t14" onclick="mouseDown(16,14)"></td><td id="t16t15" onclick="mouseDown(16,15)"></td><td id="t16t16" onclick="mouseDown(16,16)"></td><td id="t16t17" onclick="mouseDown(16,17)"></td><td id="t16t18" onclick="mouseDown(16,18)"></td><td id="t16t19" onclick="mouseDown(16,19)"></td></tr>
+<tr><td id="t17t0" onclick="mouseDown(17,0)"></td><td id="t17t1" onclick="mouseDown(17,1)"></td><td id="t17t2" onclick="mouseDown(17,2)"></td><td id="t17t3" onclick="mouseDown(17,3)"></td><td id="t17t4" onclick="mouseDown(17,4)"></td><td id="t17t5" onclick="mouseDown(17,5)"></td><td id="t17t6" onclick="mouseDown(17,6)"></td><td id="t17t7" onclick="mouseDown(17,7)"></td><td id="t17t8" onclick="mouseDown(17,8)"></td><td id="t17t9" onclick="mouseDown(17,9)"></td><td id="t17t10" onclick="mouseDown(17,10)"></td><td id="t17t11" onclick="mouseDown(17,11)"></td><td id="t17t12" onclick="mouseDown(17,12)"></td><td id="t17t13" onclick="mouseDown(17,13)"></td><td id="t17t14" onclick="mouseDown(17,14)"></td><td id="t17t15" onclick="mouseDown(17,15)"></td><td id="t17t16" onclick="mouseDown(17,16)"></td><td id="t17t17" onclick="mouseDown(17,17)"></td><td id="t17t18" onclick="mouseDown(17,18)"></td><td id="t17t19" onclick="mouseDown(17,19)"></td></tr>
+<tr><td id="t18t0" onclick="mouseDown(18,0)"></td><td id="t18t1" onclick="mouseDown(18,1)"></td><td id="t18t2" onclick="mouseDown(18,2)"></td><td id="t18t3" onclick="mouseDown(18,3)"></td><td id="t18t4" onclick="mouseDown(18,4)"></td><td id="t18t5" onclick="mouseDown(18,5)"></td><td id="t18t6" onclick="mouseDown(18,6)"></td><td id="t18t7" onclick="mouseDown(18,7)"></td><td id="t18t8" onclick="mouseDown(18,8)"></td><td id="t18t9" onclick="mouseDown(18,9)"></td><td id="t18t10" onclick="mouseDown(18,10)"></td><td id="t18t11" onclick="mouseDown(18,11)"></td><td id="t18t12" onclick="mouseDown(18,12)"></td><td id="t18t13" onclick="mouseDown(18,13)"></td><td id="t18t14" onclick="mouseDown(18,14)"></td><td id="t18t15" onclick="mouseDown(18,15)"></td><td id="t18t16" onclick="mouseDown(18,16)"></td><td id="t18t17" onclick="mouseDown(18,17)"></td><td id="t18t18" onclick="mouseDown(18,18)"></td><td id="t18t19" onclick="mouseDown(18,19)"></td></tr>
+<tr><td id="t19t0" onclick="mouseDown(19,0)"></td><td id="t19t1" onclick="mouseDown(19,1)"></td><td id="t19t2" onclick="mouseDown(19,2)"></td><td id="t19t3" onclick="mouseDown(19,3)"></td><td id="t19t4" onclick="mouseDown(19,4)"></td><td id="t19t5" onclick="mouseDown(19,5)"></td><td id="t19t6" onclick="mouseDown(19,6)"></td><td id="t19t7" onclick="mouseDown(19,7)"></td><td id="t19t8" onclick="mouseDown(19,8)"></td><td id="t19t9" onclick="mouseDown(19,9)"></td><td id="t19t10" onclick="mouseDown(19,10)"></td><td id="t19t11" onclick="mouseDown(19,11)"></td><td id="t19t12" onclick="mouseDown(19,12)"></td><td id="t19t13" onclick="mouseDown(19,13)"></td><td id="t19t14" onclick="mouseDown(19,14)"></td><td id="t19t15" onclick="mouseDown(19,15)"></td><td id="t19t16" onclick="mouseDown(19,16)"></td><td id="t19t17" onclick="mouseDown(19,17)"></td><td id="t19t18" onclick="mouseDown(19,18)"></td><td id="t19t19" onclick="mouseDown(19,19)"></td></tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		var x = 0, y = 0;
+		var board = [];
+		var NULL = 0, WHITE = 1, BLACK = 2;
+		var BOARDWIDTH = 20, BOARDHEIGHT = 20;
+		var player = WHITE;
+
+		for(var i = 0; i < BOARDHEIGHT; i++){
+			var row = [];
+			for(var j = 0; j < BOARDWIDTH; j++){
+				row.push(NULL);
+			}
+			board.push(row);
+		}
+		// console.log(board);
+		function mouseDown(x,y){
+			if(board[x][y] === NULL){
+				board[x][y] = player;
+				if(player === WHITE) player = BLACK;
+				else player = WHITE;
+			}
+			scan();
+		}
+		function draw(){
+			for(var i = 0; i < BOARDHEIGHT; i++){
+				for(var j = 0; j < BOARDWIDTH; j++){
+					var node = document.getElementById("t" + i + "t" +j);
+					if(board[i][j] === NULL){
+						node.className = "null";
+					}
+					else if(board[i][j] === WHITE){
+						node.className = "white";
+					}
+					else if(board[i][j] === BLACK){
+						node.className = "black";
+					}
+				}
+			}
+		}
+		function scan(){
+			var winner = 0;
+			for(var i = 2; i < BOARDHEIGHT-2; i++){
+				for(var j = 2; j < BOARDWIDTH-2; j++){
+					// console.log(board[i][j-2], board[i][j-1], board[i][j], board[i][j+1], board[i][j+2])
+					if(board[i][j] !== NULL){
+						if(board[i][j-2] === board[i][j] && board[i][j-1] === board[i][j] && board[i][j+1] === board[i][j] && board[i][j+2] ===board[i][j]){
+							winner = board[i][j];
+							break;
+						}
+						else if(board[i-2][j] === board[i][j] && board[i-1][j] === board[i][j] && board[i+1][j] === board[i][j] && board[i+2][j] ===board[i][j]){
+							winner = board[i][j];
+							break;
+						}
+						else if(board[i-2][j-2] === board[i][j] && board[i-1][j-1] === board[i][j] && board[i+1][j+1] === board[i][j] && board[i+2][j+2] ===board[i][j]){
+							winner = board[i][j];
+							break;
+						}
+						else if(board[i+2][j-2] === board[i][j] && board[i+1][j-1] === board[i][j] && board[i-1][j+1] === board[i][j] && board[i-2][j+2] ===board[i][j]){
+							winner = board[i][j];
+							break;
+						}
+					}
+				}
+				if(winner !== 0) break;
+			}
+			setTimeout(function(){
+				if(winner === WHITE) alert("白棋赢了！");
+				else if(winner === BLACK) alert("黑棋赢了!");
+			},100)
+		}
+		setInterval(function(){
+			draw();
+		},40)
+		// function makeTd(i,j){
+		// 	return '<td id="t' + String(i) + 't' + String(j) + '" onclick="mouseDown(' + i +',' + j + ')"></td>'
+		// }
+		// var str = "";
+		// for(var i = 0;i < 20; i++){
+		// 	var strTmp = '<tr>';
+		// 	for(var j = 0;j < 20; j++){
+		// 		strTmp += makeTd(i,j);
+		// 	}
+		// 	strTmp += "</tr>\n"
+		// 	str += strTmp;
+		// }
+		// console.log(str);
+	</script>
+</body>
+</html>
