@@ -7,7 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var serverRouter = require('./routes/wechatServer');
-var serverRou = require('./routes/server');
+var qqMusicserver = require('./routes/qqMusicserver');
+var qqServer = require('./routes/qqServer');
 
 var app = express();
 
@@ -24,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use(serverRouter);
-app.use(serverRou);
+app.use(qqMusicserver);
+app.use(qqServer);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

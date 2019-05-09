@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style type="text/css"></style>
+</head>
+<body>
+		<h2>单图上传</h2>
+		<input type="file" id="inputBox" name="logo">
+		<!-- <input type="submit" onchange="click()"> -->
+		<button onclick="clickme()">提交</button>
+	<img src="" id="img">
+	<script type="text/javascript">
+		var inputBox = document.getElementById("inputBox");
+		var img = document.getElementById("img");
+		function clickme(){
+		  var formData = new FormData();
+		  formData.append("logo", inputBox.files[0]) 
+	    request("POST", "/upload", formData, function(news){
+	    	console.log(news);
+				var result = JSON.parse(news);
+				img.src = result.url;
+			});
+		}
+
+		function request(method, url, message, cb){
+			var xhr = new XMLHttpRequest();
+			xhr.open(method, url, true);
+			// xhr.setRequestHeader("Content-type","application/json");
+			xhr.send(message);
+			xhr.onreadystatechange=function() {
+			  if (xhr.readyState==4 && xhr.status==200) {
+			     var news = xhr.responseText;
+			     cb(news);
+			  }
+			}
+		}
+	</script>
+</body>
+</html>
