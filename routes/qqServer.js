@@ -60,6 +60,7 @@ router.post('/qqlogin',upload.single('head'), function(req, res, next) {
 });
 
 router.post('/qqchatLog', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
   connection.query('select user.userName, user.userNumber, user.head, qqchatlog.message from qqchatlog inner join user on qqchatlog.userNumber=user.userNumber;', function (error, results, fields) {
     if (error) throw error;
     else res.json(results);
